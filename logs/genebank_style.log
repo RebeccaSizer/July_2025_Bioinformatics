@@ -1,0 +1,7 @@
+INFO:root:dna_genebank function called
+INFO:root:dna_genebank function complete
+INFO:root:dna_genebank function called
+INFO:root:dna_genebank function complete
+INFO:root:dna_genebank function called
+WARNING:root:Invalid base at position: 3 ('h')
+INFO:root:dna_genebank function complete

@@ -13,7 +13,11 @@ Challenge: output the following sequence with a block size of 10:
 
 GCTGAGACTTCCTGGACGGGGGACAGGCTGTGGGGTTTCTCAGATAACTGGGCCCCTGCGCTCAGGAGGCCTTCACCCTCTGCTCTGGGTAAAGTTCATTGGAACAGAAAGAAATGGATTTATCTGCTCTTCGCGTTGAAGAAGTACAAAATGTCATTAATGCTATGCAGAAAATCTTAGAGTGTCCCATCTGTCTGGAGTTGATCAAGGAACCTGTCTCCACAAAGTGTGACCACATATTTTGCAAATTTTGCATGCTGAAACTTCTCAACCAGAAGAAAGGGCCTTCACAGTGTCCTTTATGTAAGAATGATATAACCAAAAGGAGCCTACAAGAAAGTACGAGATTTGAT
 """
+#add some logging
+import logging
+logging.basicConfig(filename="chunk_seg.log", level=logging.INFO, format="%(levelname)s:%(message)s")
 
+#main block of code 
 def dna_blocks(sequence:str, gap: int):
     count = 0 
     nucleotide_bases = "ATCG"
@@ -35,7 +39,7 @@ def dna_blocks(sequence:str, gap: int):
                 new_sequence += " "
             
         else:
-            print(f"Invalid base at position: {position} ('{nucleotide}')")
+            print(f"Invalid base at position: {position + 1} ('{nucleotide}')")
 
     return new_sequence
 
